@@ -17,8 +17,12 @@ const ProductSchema = new Schema({
   in_stock: {
     type: Boolean,
     default: true
+  },
+  categories: {
+    type: [],
+    default: []
   }
-});
+}, {collection: 'product'});
 
 const ProductModel = mongoose.model('ProductModel', ProductSchema);
 
